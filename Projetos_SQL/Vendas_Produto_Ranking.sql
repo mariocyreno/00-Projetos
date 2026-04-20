@@ -11,7 +11,7 @@ with Vendas_Produto as(
         ,frs.OrderQuantity as Qtde
         ,round(sum(frs.SalesAmount), 2) as TotalVendas
         ,round(sum(frs.TotalProductCost), 2) as CustoTotal
-        ,round(SUM(frs.SalesAmount - frs.TotalProductCost), 2) as Lucro __
+        ,round(SUM(frs.SalesAmount - frs.TotalProductCost), 2) as Lucro
 
 From FactResellerSales frs
 Left join DimEmployee e on frs.EmployeeKey = e.EmployeeKey
